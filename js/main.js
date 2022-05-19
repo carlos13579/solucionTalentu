@@ -34,13 +34,14 @@ function tabla(datos) {
       }else{
           let anioData=(val.age).split("-");//creamos la variable anioData para almacenar el año de la fecha de nacimiento que el usuario ingreso en el formulario
           edad=anio-anioData[0];//la variable edad pasa a ser la resta del año actual de la variable anio, menos anioData que contiene el año de nacimiento del usuario
+          edad=edad+" años";
       }
       //usamos la propiedad innerHTML para agregar a la tabla los usuarios obtenidos 
     contenido.innerHTML +=
       "<tr>" +
       '<th scope="row">' +val.id +"</th>" +
       "<td>" +val.first_name +" " +val.last_name +"</td>" +
-      "<td>"+edad+" años</td>" +
+      "<td>"+edad+"</td>" +
       "<td>" +val.email +"</td>" +
       "</tr>";
   }
